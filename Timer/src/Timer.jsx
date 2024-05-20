@@ -32,7 +32,8 @@ const Timer = () => {
   const toggle = () => {
     if(!isActive ){
       if(timeLeft==0){
-        setTimeLeft(totalTime);
+        setTimeLeft(initialTime);
+        setTotalTime(initialTime)
       }
       setIsActive(true);
     }
