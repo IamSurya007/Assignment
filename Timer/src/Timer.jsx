@@ -30,8 +30,10 @@ const Timer = () => {
     setIsActive(false);
   };
   const toggle = () => {
-    if(!isActive){
-      setTimeLeft(totalTime);
+    if(!isActive ){
+      if(timeLeft==0){
+        setTimeLeft(totalTime);
+      }
       setIsActive(true);
     }
     else{
