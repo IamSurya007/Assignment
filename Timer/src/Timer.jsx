@@ -30,7 +30,13 @@ const Timer = () => {
     setIsActive(false);
   };
   const toggle = () => {
-    setIsActive(!isActive);
+    if(!isActive){
+      setTimeLeft(totalTime);
+      setIsActive(true);
+    }
+    else{
+      setIsActive(false);
+    }
   };
   const Add = () => {
     const newTime = timeLeft + 10;
